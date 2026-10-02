@@ -1,0 +1,36 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FrameonVideoUtility.App"
+             Name="FrameOn Community Edition"
+             RequestedThemeVariant="Dark">
+  <Application.Resources>
+    <SolidColorBrush x:Key="FrameOnBackgroundBrush" Color="#17191C" />
+    <SolidColorBrush x:Key="FrameOnShellBrush" Color="#1C1F23" />
+    <SolidColorBrush x:Key="FrameOnSurfaceBrush" Color="#25292E" />
+    <SolidColorBrush x:Key="FrameOnRaisedSurfaceBrush" Color="#30353B" />
+    <SolidColorBrush x:Key="FrameOnInputBrush" Color="#202429" />
+    <SolidColorBrush x:Key="FrameOnBorderBrush" Color="#454C54" />
+    <SolidColorBrush x:Key="FrameOnBorderStrongBrush" Color="#626C77" />
+    <SolidColorBrush x:Key="FrameOnAccentBrush" Color="#7A48D8" />
+    <SolidColorBrush x:Key="FrameOnAccentHoverBrush" Color="#9362EC" />
+    <SolidColorBrush x:Key="FrameOnTextBrush" Color="#F2F3F5" />
+    <SolidColorBrush x:Key="FrameOnMutedTextBrush" Color="#BCC1C8" />
+    <SolidColorBrush x:Key="FrameOnSubtleTextBrush" Color="#8E969F" />
+    <SolidColorBrush x:Key="FrameOnSuccessBrush" Color="#4AD295" />
+    <SolidColorBrush x:Key="FrameOnWarningBrush" Color="#F5B64B" />
+    <SolidColorBrush x:Key="FrameOnDangerBrush" Color="#F06767" />
+    <SolidColorBrush x:Key="ComboBoxDropDownBackground" Color="#25292E" />
+    <SolidColorBrush x:Key="ComboBoxDropDownBorderBrush" Color="#626C77" />
+    <SolidColorBrush x:Key="TextControlBackground" Color="#202429" />
+    <SolidColorBrush x:Key="TextControlBackgroundPointerOver" Color="#30353B" />
+    <SolidColorBrush x:Key="TextControlBackgroundFocused" Color="#202429" />
+    <SolidColorBrush x:Key="TextControlForeground" Color="#F2F3F5" />
+    <SolidColorBrush x:Key="TextControlForegroundFocused" Color="#F2F3F5" />
+    <SolidColorBrush x:Key="TextControlBorderBrushFocused" Color="#9362EC" />
+  </Application.Resources>
+
+  <Application.Styles>
+    <FluentTheme />
+    <StyleInclude Source="avares://FrameOn-Community-Skeleton/Styles/FrameOnControls.axaml" />
+  </Application.Styles>
+</Application>

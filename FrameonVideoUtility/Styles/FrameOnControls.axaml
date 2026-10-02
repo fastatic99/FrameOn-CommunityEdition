@@ -1,0 +1,133 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Style Selector="Window, UserControl">
+    <Setter Property="Background" Value="{DynamicResource FrameOnBackgroundBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource FrameOnTextBrush}" />
+  </Style>
+
+  <Style Selector="TextBlock">
+    <Setter Property="Foreground" Value="{DynamicResource FrameOnTextBrush}" />
+  </Style>
+  <Style Selector="TextBlock.muted">
+    <Setter Property="Foreground" Value="{DynamicResource FrameOnMutedTextBrush}" />
+  </Style>
+  <Style Selector="TextBlock.subtle">
+    <Setter Property="Foreground" Value="{DynamicResource FrameOnSubtleTextBrush}" />
+  </Style>
+  <Style Selector="TextBlock.eyebrow">
+    <Setter Property="Foreground" Value="{DynamicResource FrameOnAccentHoverBrush}" />
+    <Setter Property="FontSize" Value="10" />
+    <Setter Property="FontWeight" Value="Bold" />
+    <Setter Property="LetterSpacing" Value="1.3" />
+  </Style>
+  <Style Selector="TextBlock.field-label">
+    <Setter Property="Foreground" Value="{DynamicResource FrameOnMutedTextBrush}" />
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+    <Setter Property="Margin" Value="0,0,0,6" />
+  </Style>
+
+  <Style Selector="Border.workspace-card">
+    <Setter Property="Background" Value="{DynamicResource FrameOnSurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnBorderBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="14" />
+    <Setter Property="Padding" Value="22" />
+  </Style>
+  <Style Selector="Border.subsection">
+    <Setter Property="Background" Value="{DynamicResource FrameOnRaisedSurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnBorderBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="11" />
+    <Setter Property="Padding" Value="17" />
+  </Style>
+  <Style Selector="Border.step-number">
+    <Setter Property="Width" Value="28" />
+    <Setter Property="Height" Value="28" />
+    <Setter Property="CornerRadius" Value="14" />
+    <Setter Property="Background" Value="{DynamicResource FrameOnAccentBrush}" />
+  </Style>
+  <Style Selector="Border.placeholder-zone">
+    <Setter Property="Background" Value="{DynamicResource FrameOnInputBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnBorderStrongBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="11" />
+    <Setter Property="MinHeight" Value="108" />
+    <Setter Property="Padding" Value="18" />
+  </Style>
+  <Style Selector="Border.notice">
+    <Setter Property="Background" Value="#287A48D8" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnAccentBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="11" />
+    <Setter Property="Padding" Value="14" />
+  </Style>
+
+  <Style Selector="Button">
+    <Setter Property="Foreground" Value="{DynamicResource FrameOnTextBrush}" />
+    <Setter Property="Background" Value="{DynamicResource FrameOnRaisedSurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnBorderStrongBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="9" />
+    <Setter Property="Padding" Value="15,10" />
+    <Setter Property="MinHeight" Value="42" />
+    <Setter Property="FontWeight" Value="SemiBold" />
+  </Style>
+  <Style Selector="Button:pointerover">
+    <Setter Property="Background" Value="{DynamicResource FrameOnBorderBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnAccentHoverBrush}" />
+  </Style>
+  <Style Selector="Button.primary">
+    <Setter Property="Foreground" Value="White" />
+    <Setter Property="Background" Value="{DynamicResource FrameOnAccentBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnAccentBrush}" />
+  </Style>
+  <Style Selector="Button.primary:pointerover">
+    <Setter Property="Background" Value="{DynamicResource FrameOnAccentHoverBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnAccentHoverBrush}" />
+  </Style>
+  <Style Selector="Button.primary:disabled">
+    <Setter Property="Opacity" Value="0.72" />
+  </Style>
+
+  <Style Selector="TextBox, ComboBox">
+    <Setter Property="Background" Value="{DynamicResource FrameOnInputBrush}" />
+    <Setter Property="Foreground" Value="{DynamicResource FrameOnTextBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnBorderBrush}" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="9" />
+    <Setter Property="MinHeight" Value="44" />
+    <Setter Property="Padding" Value="12,8" />
+  </Style>
+  <Style Selector="TextBox:focus, ComboBox:focus">
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnAccentHoverBrush}" />
+    <Setter Property="BorderThickness" Value="2" />
+  </Style>
+
+  <Style Selector="ListBox.workspace-navigation">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="0" />
+  </Style>
+  <Style Selector="ListBox.workspace-navigation ListBoxItem">
+    <Setter Property="Background" Value="Transparent" />
+    <Setter Property="Foreground" Value="{DynamicResource FrameOnMutedTextBrush}" />
+    <Setter Property="BorderBrush" Value="Transparent" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="CornerRadius" Value="11" />
+    <Setter Property="Padding" Value="12" />
+    <Setter Property="Margin" Value="0,3" />
+    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+  </Style>
+  <Style Selector="ListBox.workspace-navigation ListBoxItem:pointerover">
+    <Setter Property="Background" Value="{DynamicResource FrameOnRaisedSurfaceBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnBorderBrush}" />
+  </Style>
+  <Style Selector="ListBox.workspace-navigation ListBoxItem:selected">
+    <Setter Property="Background" Value="{DynamicResource FrameOnAccentBrush}" />
+    <Setter Property="BorderBrush" Value="{DynamicResource FrameOnAccentHoverBrush}" />
+    <Setter Property="Foreground" Value="White" />
+  </Style>
+  <Style Selector="ListBox.workspace-navigation ListBoxItem:selected TextBlock">
+    <Setter Property="Foreground" Value="White" />
+  </Style>
+</Styles>

@@ -1,0 +1,64 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="FrameonVideoUtility.Views.VideoConverterView">
+  <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+    <StackPanel Margin="32,28,32,34" Spacing="18">
+      <StackPanel Spacing="5">
+        <TextBlock Classes="eyebrow" Text="COMMUNITY WORKSPACE" />
+        <TextBlock Text="Video Converter" FontSize="31" FontWeight="Bold" />
+        <TextBlock Classes="muted" Text="A familiar FrameOn-style shell for a local video conversion experience." FontSize="15" />
+      </StackPanel>
+
+      <Grid ColumnDefinitions="5*,2*" ColumnSpacing="18">
+        <Border Classes="workspace-card">
+          <StackPanel Spacing="17">
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="11">
+              <Border Classes="step-number"><TextBlock Text="1" Foreground="White" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+              <StackPanel Grid.Column="1"><TextBlock Text="Select video" FontSize="17" FontWeight="SemiBold" /><TextBlock Classes="subtle" Text="Choose a local source file." /></StackPanel>
+            </Grid>
+            <Border Classes="placeholder-zone">
+              <Grid ColumnDefinitions="Auto,*,Auto" ColumnSpacing="15">
+                <Border Width="52" Height="52" CornerRadius="13" Background="#2E7A48D8"><TextBlock Text="▶" FontSize="22" Foreground="{DynamicResource FrameOnAccentHoverBrush}" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="3"><TextBlock Text="No video selected" FontSize="16" FontWeight="SemiBold" /><TextBlock Classes="muted" Text="Your implementation can show format, resolution, and duration here." TextWrapping="Wrap" /></StackPanel>
+                <Button Grid.Column="2" Content="Browse Files" VerticalAlignment="Center" ToolTip.Tip="Presentation only — add your own file picker." />
+              </Grid>
+            </Border>
+
+            <Border Height="1" Background="{DynamicResource FrameOnBorderBrush}" />
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="11">
+              <Border Classes="step-number"><TextBlock Text="2" Foreground="White" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+              <StackPanel Grid.Column="1"><TextBlock Text="Output settings" FontSize="17" FontWeight="SemiBold" /><TextBlock Classes="subtle" Text="Starter controls for the options your application supports." /></StackPanel>
+            </Grid>
+            <StackPanel MaxWidth="280" HorizontalAlignment="Left">
+              <TextBlock Classes="field-label" Text="File Format" />
+              <ComboBox SelectedIndex="0"><ComboBoxItem Content="MP4" /><ComboBoxItem Content="MOV" /><ComboBoxItem Content="MKV" /></ComboBox>
+            </StackPanel>
+
+            <Border Height="1" Background="{DynamicResource FrameOnBorderBrush}" />
+            <Grid ColumnDefinitions="Auto,*" ColumnSpacing="11">
+              <Border Classes="step-number"><TextBlock Text="3" Foreground="White" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Center" /></Border>
+              <StackPanel Grid.Column="1"><TextBlock Text="Destination" FontSize="17" FontWeight="SemiBold" /><TextBlock Classes="subtle" Text="Choose where a completed video would be saved." /></StackPanel>
+            </Grid>
+            <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10"><TextBox PlaceholderText="Choose a destination folder" IsReadOnly="True" /><Button Grid.Column="1" Content="Browse" ToolTip.Tip="Presentation only — add your own folder picker." /></Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Spacing="10"><Button Content="Clear" MinWidth="100" /><Button Classes="primary" Content="Convert Video" MinWidth="145" IsEnabled="False" ToolTip.Tip="Connect this button to your own conversion service." /></StackPanel>
+          </StackPanel>
+        </Border>
+
+        <StackPanel Grid.Column="1" Spacing="14">
+          <Border Classes="workspace-card">
+            <StackPanel Spacing="13">
+              <TextBlock Text="Video Summary" FontSize="19" FontWeight="SemiBold" />
+              <TextBlock Classes="muted" Text="A selected video's technical details can be presented here." TextWrapping="Wrap" />
+              <Border Height="1" Background="{DynamicResource FrameOnBorderBrush}" />
+              <Grid ColumnDefinitions="*,Auto"><TextBlock Classes="muted" Text="File" /><TextBlock Grid.Column="1" Text="—" /></Grid>
+              <Grid ColumnDefinitions="*,Auto"><TextBlock Classes="muted" Text="Resolution" /><TextBlock Grid.Column="1" Text="—" /></Grid>
+              <Grid ColumnDefinitions="*,Auto"><TextBlock Classes="muted" Text="Duration" /><TextBlock Grid.Column="1" Text="—" /></Grid>
+              <Grid ColumnDefinitions="*,Auto"><TextBlock Classes="muted" Text="Output" /><TextBlock Grid.Column="1" Text="MP4" /></Grid>
+            </StackPanel>
+          </Border>
+          <Border Classes="notice"><StackPanel Spacing="5"><TextBlock Text="Bring your own engine" FontWeight="SemiBold" /><TextBlock Classes="muted" Text="Define your own validation, processing, cancellation, and output-conflict behavior behind this view." TextWrapping="Wrap" /></StackPanel></Border>
+        </StackPanel>
+      </Grid>
+    </StackPanel>
+  </ScrollViewer>
+</UserControl>

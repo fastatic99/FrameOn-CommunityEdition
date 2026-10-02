@@ -1,0 +1,70 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="using:FrameonVideoUtility.ViewModels"
+             xmlns:views="using:FrameonVideoUtility.Views"
+             x:Class="FrameonVideoUtility.Views.MainView"
+             x:DataType="vm:MainWindowViewModel">
+  <Grid ColumnDefinitions="264,*">
+    <Border Grid.Column="0"
+            Background="{DynamicResource FrameOnShellBrush}"
+            BorderBrush="{DynamicResource FrameOnBorderBrush}"
+            BorderThickness="0,0,1,0">
+      <Grid RowDefinitions="Auto,Auto,*" Margin="18,20">
+        <Grid Grid.Row="0" ColumnDefinitions="Auto,*" ColumnSpacing="12" Margin="7,2,7,22">
+          <Image Width="48" Height="48" Source="/Assets/frameon_icon_master_cleaned_1024.png" />
+          <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="1">
+            <TextBlock Text="{Binding ProductName}" FontSize="21" FontWeight="Bold" />
+            <TextBlock Text="{Binding ProductSubtitle}" Classes="subtle" FontSize="11" />
+          </StackPanel>
+        </Grid>
+
+        <StackPanel Grid.Row="1" Margin="8,0,8,8" Spacing="2">
+          <TextBlock Classes="eyebrow" Text="WORKSPACES" />
+          <TextBlock Classes="subtle" Text="Local conversion views" FontSize="11" />
+        </StackPanel>
+
+        <ListBox x:Name="WorkspaceNavigation"
+                 Grid.Row="2"
+                 Classes="workspace-navigation"
+                 ItemsSource="{Binding Workspaces}"
+                 SelectedItem="{Binding SelectedWorkspace}">
+          <ListBox.ItemTemplate>
+            <DataTemplate x:DataType="vm:WorkspaceCard">
+              <Grid ColumnDefinitions="34,*" ColumnSpacing="10">
+                <Border Width="32" Height="32" CornerRadius="9" Background="#2130353B">
+                  <TextBlock Text="{Binding Glyph}" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                </Border>
+                <StackPanel Grid.Column="1" VerticalAlignment="Center" Spacing="1">
+                  <TextBlock Text="{Binding Title}" FontWeight="SemiBold" FontSize="14" />
+                  <TextBlock Text="{Binding Subtitle}" FontSize="10" Opacity="0.78" TextTrimming="CharacterEllipsis" />
+                </StackPanel>
+              </Grid>
+            </DataTemplate>
+          </ListBox.ItemTemplate>
+        </ListBox>
+
+      </Grid>
+    </Border>
+
+    <Grid Grid.Column="1" RowDefinitions="64,*">
+      <Border Grid.Row="0"
+              Background="{DynamicResource FrameOnShellBrush}"
+              BorderBrush="{DynamicResource FrameOnBorderBrush}"
+              BorderThickness="0,0,0,1"
+              Padding="30,0">
+        <Grid VerticalAlignment="Center">
+          <StackPanel Orientation="Horizontal" Spacing="9" VerticalAlignment="Center">
+            <TextBlock Text="FrameOn" FontWeight="SemiBold" />
+            <TextBlock Text="/" Classes="subtle" />
+            <TextBlock Text="{Binding SelectedWorkspace.Title}" Classes="muted" />
+          </StackPanel>
+        </Grid>
+      </Border>
+
+      <Carousel Grid.Row="1" SelectedIndex="{Binding #WorkspaceNavigation.SelectedIndex}">
+        <views:AudioConverterView />
+        <views:VideoConverterView />
+      </Carousel>
+    </Grid>
+  </Grid>
+</UserControl>
