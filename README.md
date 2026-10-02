@@ -4,6 +4,10 @@ This repository is a small, buildable desktop-application starter extracted from
 
 The **full FrameOn app** is a separate download. Get its Windows and macOS installers from the [official FrameOn website](https://frameon.choatehome.com/#download). This repository's `main` branch contains Community Edition source; its GitHub Releases contain the official full-app installers. The automatically generated source archives attached to those releases are Community Edition source, not the full-app source.
 
+## macOS 27 compatibility
+
+FrameOn 1.0.4 and earlier do not launch on macOS 27. Install FrameOn 1.0.5 or later.
+  
 ## Prerequisites
 
 - [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0)
